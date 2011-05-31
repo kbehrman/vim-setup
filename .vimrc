@@ -8,6 +8,7 @@ autocmd! bufwritepost .vimrc source %
 " Sets path to directory buffer was loaded from
 " autocmd BufEnter * lcd %:p:h
 autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
+set history=1000
 
 " -----------------------------------------------------------------------------
 " | Display |
@@ -45,13 +46,16 @@ set hlsearch  " highlight search
 set incsearch " incremental search, search as you type
 set showmatch
 set scrolloff=5
-
+set ignorecase 
+set smartcase
 
 
 " -----------------------------------------------------------------------------
 " | Pluggins |
 " -----------------------------------------------------------------------------
+filetype on
 filetype plugin on
+filetype indent on
 let NERDTreeIgnore=['\.pyc$']
 
 
