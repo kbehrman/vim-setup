@@ -1,4 +1,6 @@
 set nocompatible
+"no bell
+set vb t_vb=". 
 
 " -----------------------------------------------------------------------------
 " | Buffer |
@@ -9,6 +11,7 @@ autocmd! bufwritepost .vimrc source %
 " autocmd BufEnter * lcd %:p:h
 autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 set history=1000
+set directory=~/.vim/tmp
 
 " -----------------------------------------------------------------------------
 " | Display |
@@ -71,6 +74,7 @@ let Tlist_WinWidth = 50
 nnoremap <space> za
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
+
 
 :" The leader defaults to backslash, so (by default) this
 :" maps \* and \g* (see :help Leader).
