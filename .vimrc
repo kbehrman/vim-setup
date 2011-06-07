@@ -11,7 +11,7 @@ autocmd! bufwritepost .vimrc source %
 " autocmd BufEnter * lcd %:p:h
 autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 set history=1000
-set directory=~/.vim/tmp
+set directory=~/tmp//,$VIMHOME/tmp//,/tmp//
 
 " -----------------------------------------------------------------------------
 " | Display |
@@ -25,7 +25,7 @@ set laststatus=2
 set t_Co=256 " 256 colors
 set background=dark
 colorscheme ir_black_mod
-match WarningMsg '\%>80v.\+' " Show long lines
+match WarningMsg '\%>120v.\+' " Show long lines
 
 " -----------------------------------------------------------------------------
 " | Insert |
