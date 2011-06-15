@@ -10,6 +10,9 @@ autocmd! bufwritepost .vimrc source %
 " Sets path to directory buffer was loaded from
 " autocmd BufEnter * lcd %:p:h
 autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
+autocmd BufNewFile *.py 0r $VIMHOME/templates/python.tpl
+"autocmd BufNewFile *.rb 0r $VIMHOME/templates/ruby.tpl
+"autocmd BufNewFile *.js 0r $VIMHOME/templates/javascript.tpl
 set history=1000
 set directory=~/tmp//,$VIMHOME/tmp//,/tmp//
 
@@ -54,6 +57,11 @@ set smartcase
 
 
 " -----------------------------------------------------------------------------
+" | Normal |
+" -----------------------------------------------------------------------------
+source $VIMRUNTIME/macros/matchit.vim
+
+" -----------------------------------------------------------------------------
 " | Pluggins |
 " -----------------------------------------------------------------------------
 filetype on
@@ -61,6 +69,12 @@ filetype plugin on
 filetype indent on
 let NERDTreeIgnore=['\.pyc$']
 
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
 
 " taglist
 let Tlist_Ctags_Cmd = "/opt/local/bin/ctags"

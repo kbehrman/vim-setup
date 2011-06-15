@@ -15,12 +15,12 @@ endif
 let loaded_javascript_syntax_checker = 1
 
 "bail if the user doesnt have jsl installed
-if !executable("jsl")
+if !executable("jslint")
     finish
 endif
 
 function! SyntaxCheckers_javascript_GetLocList()
-    let makeprg = "jsl -nologo -nofilelisting -nosummary -nocontext -process ".shellescape(expand('%'))
+    let makeprg = "jslint ".shellescape(expand('%'))." -nologo -nofilelisting -nosummary -nocontext -process"
     let errorformat='%W%f(%l): lint warning: %m,%-Z%p^,%W%f(%l): warning: %m,%-Z%p^,%E%f(%l): SyntaxError: %m,%-Z%p^,%-G'
     return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction
