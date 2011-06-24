@@ -43,10 +43,12 @@
 'Tlist_WinHeight'	taglist.txt	/*'Tlist_WinHeight'*
 'Tlist_WinWidth'	taglist.txt	/*'Tlist_WinWidth'*
 'loaded_nerd_tree'	NERD_tree.txt	/*'loaded_nerd_tree'*
+'syntastic_auto_jump'	syntastic.txt	/*'syntastic_auto_jump'*
 'syntastic_auto_loc_list'	syntastic.txt	/*'syntastic_auto_loc_list'*
 'syntastic_disabled_filetypes'	syntastic.txt	/*'syntastic_disabled_filetypes'*
 'syntastic_enable_signs'	syntastic.txt	/*'syntastic_enable_signs'*
 'syntastic_quiet_warnings'	syntastic.txt	/*'syntastic_quiet_warnings'*
+'syntastic_stl_format'	syntastic.txt	/*'syntastic_stl_format'*
 :CVSEdit	vcscommand.txt	/*:CVSEdit*
 :CVSEditors	vcscommand.txt	/*:CVSEditors*
 :CVSUnedit	vcscommand.txt	/*:CVSUnedit*
