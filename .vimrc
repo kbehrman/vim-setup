@@ -14,7 +14,7 @@ autocmd BufNewFile *.py 0r $VIMHOME/templates/python.tpl
 "autocmd BufNewFile *.rb 0r $VIMHOME/templates/ruby.tpl
 "autocmd BufNewFile *.js 0r $VIMHOME/templates/javascript.tpl
 set history=1000
-set directory=~/tmp//,$VIMHOME/tmp//,/tmp//
+set directory=~/tmp/vim_working//,$VIMHOME/tmp//,/tmp//
 
 " -----------------------------------------------------------------------------
 " | Display |
@@ -28,7 +28,6 @@ set laststatus=2
 set t_Co=256 " 256 colors
 set background=dark
 colorscheme ir_black_mod
-match WarningMsg '\%>120v.\+' " Show long lines
 
 " -----------------------------------------------------------------------------
 " | Insert |

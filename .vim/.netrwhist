@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/kennedy/projects/shotgun-software/trunk/public/javascripts'
+let g:netrw_dirhist_2='/Users/kennedy/Documents/shotgun-software/vpn'
+let g:netrw_dirhist_3='/Users/kennedy/projects/shotgun-software/api/master/shotgun_api3'
+let g:netrw_dirhist_4='/Users/kennedy/projects/shotgun-software/trunk/app'
+let g:netrw_dirhist_5='/Users/kennedy/projects/vim-setup/.vim/ftplugin/python'

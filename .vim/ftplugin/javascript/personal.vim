@@ -12,3 +12,4 @@ set omnifunc=javascriptcomplete#CompleteJS
 let g:js_indent="$VIMHOME/indent/javascript.vim"
 
 SyntasticEnable JAVASCRIPT
+match WarningMsg '\%>120v.\+' " Show long lines
