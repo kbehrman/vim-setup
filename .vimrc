@@ -97,14 +97,12 @@ imap jj <Esc>
 
 
 "resize horzontal split window
-nmap <M-Left> <C-W>><C-W>>
-nmap <M-Right> <C-W><<C-W><
-if bufwinnr(1)
-  map + <C-W>+
-  map - <C-W>-
-endif
+map + <C-W>+
+map - <C-W>-
+map <c-n> <c-w><
+map <c-m> <c-w>>
 
-cmap W w
+" cmap W w
 
 map <F3> :NERDTreeToggle<cr>
 map <F4> :TlistToggle<CR>

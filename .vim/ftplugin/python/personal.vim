@@ -33,3 +33,5 @@ SyntasticDisable python
 " | Abbreviations |
 " -----------------------------------------------------------------------------
 iabbrev ifmain if __name__ == '__main__':
+iabbrev pdb import pdb; pdb.set_trace()
+iabbrev inspectframes  import inspect;frames=[x[1:] for x in inspect.getouterframes(inspect.currentframe())];for f in frames: print f;pass #TODO takeout
