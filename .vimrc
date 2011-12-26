@@ -63,6 +63,7 @@ source $VIMRUNTIME/macros/matchit.vim
 " -----------------------------------------------------------------------------
 " | Pluggins |
 " -----------------------------------------------------------------------------
+call pathogen#infect()
 filetype on
 filetype plugin on
 filetype indent on
