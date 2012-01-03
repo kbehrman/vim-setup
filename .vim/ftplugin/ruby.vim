@@ -9,6 +9,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
-map <F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=+ruby,-C,-C++,-vim,-make .<CR>
+map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=+ruby,-C,-C++,-vim,-make .<CR>
 " SyntasticEnable ruby
 match WarningMsg '\%>120v.\+' " Show long lines

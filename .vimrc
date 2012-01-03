@@ -27,7 +27,7 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
 set laststatus=2
 set t_Co=256 " 256 colors
 set background=dark
-colorscheme ir_black_mod
+colorscheme ir_black
 
 " -----------------------------------------------------------------------------
 " | Insert |
@@ -68,6 +68,7 @@ filetype on
 filetype plugin on
 filetype indent on
 let NERDTreeIgnore=['\.pyc$']
+let g:Tex_ViewRule_pdf = 'Preview'
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -105,8 +106,8 @@ map <c-m> <c-w>>
 
 " cmap W w
 
-map <F3> :NERDTreeToggle<cr>
-map <F4> :TlistToggle<CR>
-map <F5> :FufCoverageFile <CR>
-map <F6> :FufTag <CR>
+map <Leader><F3> :NERDTreeToggle<cr>
+map <Leader><F4> :TlistToggle<CR>
+map <Leader><F5> :FufCoverageFile <CR>
+map <Leader><F6> :FufTag <CR>
 

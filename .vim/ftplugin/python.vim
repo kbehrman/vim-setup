@@ -21,8 +21,8 @@ let g:pylint_onwrite = 1
 " -----------------------------------------------------------------------------
 " | Mappings |
 " -----------------------------------------------------------------------------
-map <F2> :Pylint<CR><C-l>
-map <F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=-javascript,-html,-C,-C++,-vim,-make .<CR>
+map <Leader><F2> :Pylint<CR><C-l>
+map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=-javascript,-html,-C,-C++,-vim,-make .<CR>
 "map <F9> :!/usr/bin/ctags  --c++-kinds=+p --fields=+iaS --extra=+q --languages=+python -f=~/.vim/tags/python.vim /usr/lib/python2.6 .<CR>
 
 match WarningMsg '\%>100v.\+' " Show long lines
