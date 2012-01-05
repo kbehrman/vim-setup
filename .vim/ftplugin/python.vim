@@ -26,7 +26,7 @@ map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra
 "map <F9> :!/usr/bin/ctags  --c++-kinds=+p --fields=+iaS --extra=+q --languages=+python -f=~/.vim/tags/python.vim /usr/lib/python2.6 .<CR>
 
 match WarningMsg '\%>100v.\+' " Show long lines
-SyntasticDisable python
+" SyntasticDisable python
 
 
 
