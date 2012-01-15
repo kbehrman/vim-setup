@@ -46,6 +46,7 @@ git clone https://github.com/vim-scripts/taglist.vim.git
 mkdir -p pythonsyntax/syntax
 curl 'http://www.vim.org/scripts/download_script.php?src_id=14268' > pythonsyntax/syntax/python3.0.vim
 cp -rf /Users/kennedy/src/vim-latex/vim-latex-1.8.23-20110214.1049-git089726a vim-latex
-
+mkdir -p vim-pep8/ftplugin
+curl http://www.vim.org/scripts/download_script.php?src_id=13395 > vim-pep8/ftplugin/python_pep8.vim
 
 
