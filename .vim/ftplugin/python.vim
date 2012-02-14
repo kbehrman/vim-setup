@@ -24,8 +24,9 @@ let g:pylint_onwrite = 1
 map <Leader><F2> :Pylint<CR><C-l>
 map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=-javascript,-html,-C,-C++,-vim,-make .<CR>
 "map <F9> :!/usr/bin/ctags  --c++-kinds=+p --fields=+iaS --extra=+q --languages=+python -f=~/.vim/tags/python.vim /usr/lib/python2.6 .<CR>
+map <Leader> <F9> :call Pep8()<CR>
 
-match WarningMsg '\%>100v.\+' " Show long lines
+match WarningMsg '\%>120v.\+' " Show long lines
 " SyntasticDisable python
 
 
@@ -34,5 +35,5 @@ match WarningMsg '\%>100v.\+' " Show long lines
 " | Abbreviations |
 " -----------------------------------------------------------------------------
 iabbrev ifmain if __name__ == '__main__':
-iabbrev pdb import pdb; pdb.set_trace()
+iabbrev pdb import pdb; pdb.set_trace(); #TODO Take out
 iabbrev inspectframes  import inspect;frames=[x[1:] for x in inspect.getouterframes(inspect.currentframe())];for f in frames: print f;pass #TODO takeout

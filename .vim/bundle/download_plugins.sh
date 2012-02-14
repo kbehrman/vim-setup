@@ -49,4 +49,13 @@ cp -rf /Users/kennedy/src/vim-latex/vim-latex-1.8.23-20110214.1049-git089726a vi
 mkdir -p vim-pep8/ftplugin
 curl http://www.vim.org/scripts/download_script.php?src_id=13395 > vim-pep8/ftplugin/python_pep8.vim
 
+pushd vcscommand
+mkdir plugin
+mkdir doc
+curl http://www.vim.org/scripts/download_script.php?src_id=17031 > vcscommand.zip
+cd plugin
+tar zxvf vcscommand.zip
+mv vcscommand.txt ../doc
+popd vcscommand
+
 
