@@ -70,6 +70,7 @@ filetype indent on
 let NERDTreeIgnore=['\.pyc$']
 let g:NERDTreeDirArrows=0
 let g:Tex_ViewRule_pdf = 'Preview'
+let g:VCSCommandSplit = 'vertical'
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -83,6 +84,17 @@ let Tlist_Ctags_Cmd = "/opt/local/bin/ctags"
 let Tlist_WinWidth = 50
 
 
+" -----------------------------------------------------------------------------
+"  | Functions |
+" -----------------------------------------------------------------------------
+function! s:gtd_open()
+  tabnew
+  lcd ~/projects/GTD
+  e ~/projects/GTD/collection.rst
+  NERDTree 
+endfunction
+
+command GTDOpen :call <SID>gtd_open()
 
 " -----------------------------------------------------------------------------
 " | Mappings |
@@ -90,7 +102,6 @@ let Tlist_WinWidth = 50
 nnoremap <space> za
 " Professor VIM says '87% of users prefer jj over esc', jj abrams strongly disagrees
 imap jj <Esc>
-
 
 :" The leader defaults to backslash, so (by default) this
 :" maps \* and \g* (see :help Leader).

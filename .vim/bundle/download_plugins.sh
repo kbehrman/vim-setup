@@ -14,7 +14,8 @@ rm -rf vim-irblack
 rm -rf vim-ruby-refactoring
 rm -rf vim-web-indent
 rm -rf vim-latex
-
+rm -rf vcscommand
+#rm -rf ropevim
 
 git clone https://github.com/vim-scripts/L9.git
 hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder 
@@ -49,13 +50,19 @@ cp -rf /Users/kennedy/src/vim-latex/vim-latex-1.8.23-20110214.1049-git089726a vi
 mkdir -p vim-pep8/ftplugin
 curl http://www.vim.org/scripts/download_script.php?src_id=13395 > vim-pep8/ftplugin/python_pep8.vim
 
+mkdir vcscommand
 pushd vcscommand
 mkdir plugin
 mkdir doc
 curl http://www.vim.org/scripts/download_script.php?src_id=17031 > vcscommand.zip
-cd plugin
 tar zxvf vcscommand.zip
-mv vcscommand.txt ../doc
-popd vcscommand
+popd 
 
+#mkdir ropevim
+#pushd ropevim
+#curl http://pypi.python.org/packages/source/r/ropevim/ropevim-0.3-rc.tar.gz#md5=1564956791a1f2e8b895c5b312294549 > ropevim-0.3-rc.tar.gz
+#tar -vxf ropevim-0.3-rc.tar.gz
+#mkdir plugin
+#mv ropevim-0.3-rc/ropevim.vim plugin/
+#popd
 
