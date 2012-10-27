@@ -16,7 +16,7 @@ rm -rf vim-web-indent
 rm -rf vim-latex
 rm -rf vcscommand
 #rm -rf ropevim
-
+#rm -rf ropevim-pathogen
 git clone https://github.com/vim-scripts/L9.git
 hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder 
 mkdir -p rubycomplete/ftplugin/ruby
@@ -24,11 +24,11 @@ curl 'http://www.vim.org/scripts/download_script.php?src_id=6203' > rubycomplete
 git clone https://github.com/scrooloose/syntastic.git
 git clone git@github.com:wgibbs/vim-irblack.git
 # this brings in more than pylint, but pylint is fixed for newer pylint
-#git clone https://github.com/JoseBlanca/vim-for-python.git
-#mkdir -p pylint/compiler
-#mv vim-for-python/vim/compiler/pylint.vim pylint/compiler/
-#rm -rf vim-for-python
-git clone https://github.com/rygwdn/vim-pylint.git
+git clone https://github.com/JoseBlanca/vim-for-python.git
+mkdir -p pylint/compiler
+mv vim-for-python/vim/compiler/pylint.vim pylint/compiler/
+rm -rf vim-for-python
+#git clone https://github.com/rygwdn/vim-pylint.git
 
 mkdir -p pythoncomplete/autoload
 curl 'http://www.vim.org/scripts/download_script.php?src_id=10872' > pythoncomplete/autoload/pythoncomplete.vim
@@ -58,6 +58,7 @@ curl http://www.vim.org/scripts/download_script.php?src_id=17031 > vcscommand.zi
 tar zxvf vcscommand.zip
 popd 
 
+#hg clone https://bitbucket.org/tcoopman/ropevim-pathogen
 #mkdir ropevim
 #pushd ropevim
 #curl http://pypi.python.org/packages/source/r/ropevim/ropevim-0.3-rc.tar.gz#md5=1564956791a1f2e8b895c5b312294549 > ropevim-0.3-rc.tar.gz
@@ -65,4 +66,4 @@ popd
 #mkdir plugin
 #mv ropevim-0.3-rc/ropevim.vim plugin/
 #popd
-
+#git clone https://github.com/rygwdn/ropevim-helper.git

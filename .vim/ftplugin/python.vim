@@ -28,7 +28,7 @@ map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra
 map <Leader> <F9> :call Pep8()<CR>
 
 match WarningMsg '\%>120v.\+' " Show long lines
-" SyntasticDisable python
+"SyntasticDisable python
 
 
 
@@ -41,3 +41,5 @@ iabbrev inspectframes  import inspect;frames=[x[1:] for x in inspect.getouterfra
 iabbrev sefl self
 iabbrev slef self
 iabbrev __inti__ __init__
+iabbrev NOne None
+iabbrev tempalte template
