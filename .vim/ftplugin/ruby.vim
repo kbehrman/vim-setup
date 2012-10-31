@@ -11,4 +11,10 @@ highlight Pmenu ctermbg=238 gui=bold
 
 map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=+ruby,-C,-C++,-vim,-make .<CR>
 " SyntasticEnable ruby
+g:syntastic_enable_signs=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
 match WarningMsg '\%>120v.\+' " Show long lines
