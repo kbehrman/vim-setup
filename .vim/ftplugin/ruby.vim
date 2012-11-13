@@ -18,3 +18,6 @@ set statusline+=%*
 
 
 match WarningMsg '\%>120v.\+' " Show long lines
+
+iabbrev debug require 'ruby-debug'; debugger; #TODO Take out
+iabbrev sefl self
