@@ -15,6 +15,8 @@ rm -rf vim-ruby-refactoring
 rm -rf vim-web-indent
 rm -rf vim-latex
 rm -rf vcscommand
+rm -rf vim-surround
+rm -rf linediff
 #rm -rf ropevim
 #rm -rf ropevim-pathogen
 git clone https://github.com/vim-scripts/L9.git
@@ -44,6 +46,7 @@ git clone https://github.com/corntrace/bufexplorer.git
 git clone https://github.com/ecomba/vim-ruby-refactoring.git
 git clone https://github.com/ervandew/supertab.git
 git clone https://github.com/vim-scripts/taglist.vim.git
+git clone https://github.com/tpope/vim-surround.git
 mkdir -p pythonsyntax/syntax
 curl 'http://www.vim.org/scripts/download_script.php?src_id=14268' > pythonsyntax/syntax/python3.0.vim
 cp -rf /Users/kennedy/src/vim-latex/vim-latex-1.8.23-20110214.1049-git089726a vim-latex
@@ -57,6 +60,8 @@ mkdir doc
 curl http://www.vim.org/scripts/download_script.php?src_id=17031 > vcscommand.zip
 tar zxvf vcscommand.zip
 popd 
+
+git clone git://github.com/AndrewRadev/linediff.vim.git ~/.vim/bundle/linediff 
 
 #hg clone https://bitbucket.org/tcoopman/ropevim-pathogen
 #mkdir ropevim

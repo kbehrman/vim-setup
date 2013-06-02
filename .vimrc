@@ -13,6 +13,9 @@ autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 autocmd BufNewFile *.py 0r $VIMHOME/templates/python.tpl
 "autocmd BufNewFile *.rb 0r $VIMHOME/templates/ruby.tpl
 "autocmd BufNewFile *.js 0r $VIMHOME/templates/javascript.tpl
+ 
+" un fold when open buffer
+"au BufRead * normal zR
 set history=1000
 set directory=~/tmp/vim_working//,$VIMHOME/tmp//,/tmp//
 
@@ -28,6 +31,7 @@ set laststatus=2
 set t_Co=256 " 256 colors
 set background=dark
 " colorscheme ir_black
+" set foldmethod=syntax
 
 " -----------------------------------------------------------------------------
 " | Insert |
@@ -51,7 +55,7 @@ set hlsearch  " highlight search
 set incsearch " incremental search, search as you type
 set showmatch
 set scrolloff=5
-set ignorecase 
+set noignorecase 
 set smartcase
 
 
@@ -64,6 +68,7 @@ source $VIMRUNTIME/macros/matchit.vim
 " | Pluggins |
 " -----------------------------------------------------------------------------
 call pathogen#infect()
+Helptags
 filetype on
 filetype plugin on
 filetype indent on
@@ -87,14 +92,16 @@ let Tlist_WinWidth = 50
 " -----------------------------------------------------------------------------
 "  | Functions |
 " -----------------------------------------------------------------------------
-function! s:gtd_open()
-  tabnew
-  lcd ~/projects/GTD
-  e ~/projects/GTD/collection.rst
-  NERDTree 
-endfunction
+if !exists("*gtd_open()")
+  function! s:gtd_open()
+    tabnew
+    lcd ~/projects/GTD
+    e ~/projects/GTD/collection.rst
+    NERDTree 
+  endfunction
 
-command GTDOpen :call <SID>gtd_open()
+  command! GTDOpen :call <SID>gtd_open()
+endif
 
 " -----------------------------------------------------------------------------
 " | Mappings |
