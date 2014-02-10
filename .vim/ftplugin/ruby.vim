@@ -24,3 +24,5 @@ match WarningMsg '\%>120v.\+' " Show long lines
 iabbrev debug require 'ruby-debug'; debugger; #TODO Take out
 iabbrev sefl self
 iabbrev payattention require 'ruby-debug';debugger;<CR> #PAY ATTENTION: #TODO Take out
+iabbrev puts'' puts '--------------------------------------------'<CR>puts '--------------------------------------------'<CR>puts '--------------------------------------------'<CR>puts '--------------------------------------------'
+iabbrev putserr puts '--------------------------------------------'<CR>puts '--------------------------------------------'<CR>puts err<CR>pp err.backtrace<CR>puts '--------------------------------------------'<CR>puts '--------------------------------------------'

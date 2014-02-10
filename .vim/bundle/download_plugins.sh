@@ -63,6 +63,7 @@ popd
 
 git clone git://github.com/AndrewRadev/linediff.vim.git ~/.vim/bundle/linediff 
 
+git clone git://github.com/tpope/vim-fugitive.git
 #hg clone https://bitbucket.org/tcoopman/ropevim-pathogen
 #mkdir ropevim
 #pushd ropevim
