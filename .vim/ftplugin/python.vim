@@ -44,5 +44,5 @@ iabbrev slef self
 iabbrev __inti__ __init__
 iabbrev NOne None
 iabbrev tempalte template
-iabbrev codeeval import sys<CR><CR>with open(sys.argv[1], 'r') as open_file:<CR>for test in open_file:<CR>if test:<CR>
+iabbrev codeeval import sys<CR><CR>with open(sys.argv[1], 'r') as open_file:<CR>for test in open_file:<CR>test = test.strip()<CR>if test:
 

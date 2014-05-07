@@ -36,9 +36,7 @@ set background=dark
 " -----------------------------------------------------------------------------
 " | Insert |
 " -----------------------------------------------------------------------------
-"set cindent
-"TODO look up cinoptions for indenting
-set smartindent
+" indent called in plugins
 set cino=(0
 set backspace=indent,eol,start
 let loaded_matchparen = 1 "get rid of jumping parenthesis

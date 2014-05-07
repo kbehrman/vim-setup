@@ -35,11 +35,11 @@ rm -rf vim-for-python
 mkdir -p pythoncomplete/autoload
 curl 'http://www.vim.org/scripts/download_script.php?src_id=10872' > pythoncomplete/autoload/pythoncomplete.vim
 git clone 'https://github.com/garbas/vim-web-indent.git' 
-mkdir -p indentanything/plugin
-pushd indentanything/plugin
-curl 'http://www.vim.org/scripts/download_script.php?src_id=10228' >  indentanything.tar.gz
-tar zxvf indentanything.tar.gz
-popd
+#mkdir -p indentanything/plugin
+#pushd indentanything/plugin
+#curl 'http://www.vim.org/scripts/download_script.php?src_id=10228' >  indentanything.tar.gz
+#tar zxvf indentanything.tar.gz
+#popd
 
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/corntrace/bufexplorer.git
