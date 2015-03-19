@@ -40,9 +40,9 @@ set background=dark
 set cino=(0
 set backspace=indent,eol,start
 let loaded_matchparen = 1 "get rid of jumping parenthesis
-set tabstop=2     
-set shiftwidth=2 
-set softtabstop=2     
+set tabstop=4     
+set shiftwidth=4 
+set softtabstop=4     
 set smarttab       
 set expandtab        
 
@@ -83,6 +83,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_loc_list_height=5
 
 " taglist
 let Tlist_Ctags_Cmd = "/opt/local/bin/ctags"
@@ -96,11 +97,29 @@ if !exists("*gtd_open()")
   function! s:gtd_open()
     tabnew
     lcd ~/projects/GTD
-    e ~/projects/GTD/collection.rst
+    e ~/projects/GTD/actions
     NERDTree 
   endfunction
 
   command! GTDOpen :call <SID>gtd_open()
+endif
+
+" http://vim.wikia.com/wiki/Underline_using_dashes_automatically
+function! s:Underline(chars)
+  let chars = empty(a:chars) ? '-' : a:chars
+  let nr_columns = virtcol('$') - 1
+  let uline = repeat(chars, (nr_columns / len(chars)) + 1)
+  put =strpart(uline, 0, nr_columns)
+endfunction
+command! -nargs=? Underline call s:Underline(<q-args>)
+
+if !exists("*insert_date_line()")
+  function! s:insert_date_line()
+    r !date
+    Underline
+  endfunction
+
+  command! Date :call <SID>insert_date_line()
 endif
 
 " -----------------------------------------------------------------------------
@@ -129,4 +148,5 @@ map <Leader><F3> :NERDTreeToggle<cr>
 map <Leader><F4> :TlistToggle<CR>
 map <Leader><F5> :FufCoverageFile <CR>
 map <Leader><F6> :FufTag <CR>
+map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=-javascript,-html,-C,-C++,-vim,-make .<CR>
 

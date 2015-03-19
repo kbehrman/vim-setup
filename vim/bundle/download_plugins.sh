@@ -73,3 +73,4 @@ git clone git://github.com/tpope/vim-fugitive.git
 #mv ropevim-0.3-rc/ropevim.vim plugin/
 #popd
 #git clone https://github.com/rygwdn/ropevim-helper.git
+git clone https://bitbucket.org/ludovicchabant/vim-gutentags
