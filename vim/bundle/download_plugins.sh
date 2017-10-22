@@ -17,8 +17,11 @@ rm -rf vim-latex
 rm -rf vcscommand
 rm -rf vim-surround
 rm -rf linediff
+rm taskpaper.vim
 #rm -rf ropevim
 #rm -rf ropevim-pathogen
+
+
 git clone https://github.com/vim-scripts/L9.git
 hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder 
 mkdir -p rubycomplete/ftplugin/ruby
@@ -75,3 +78,6 @@ git clone git://github.com/tpope/vim-fugitive.git
 #git clone https://github.com/rygwdn/ropevim-helper.git
 git clone https://github.com/ludovicchabant/vim-gutentags.git
 git clone https://github.com/elixir-lang/vim-elixir.git 
+
+
+git clone https://github.com/davidoc/taskpaper.vim

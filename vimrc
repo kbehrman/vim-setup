@@ -97,7 +97,7 @@ if !exists("*gtd_open()")
   function! s:gtd_open()
     tabnew
     lcd ~/projects/GTD
-    e ~/projects/GTD/actions
+    e ~/projects/GTD/todo.taskpaper
     NERDTree 
   endfunction
 
