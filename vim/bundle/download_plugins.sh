@@ -81,3 +81,5 @@ git clone https://github.com/elixir-lang/vim-elixir.git
 
 
 git clone https://github.com/davidoc/taskpaper.vim
+
+git clone https://github.com/hashivim/vim-terraform.git
