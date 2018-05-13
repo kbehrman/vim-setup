@@ -97,8 +97,7 @@ if !exists("*gtd_open()")
   function! s:gtd_open()
     tabnew
     lcd ~/projects/GTD
-    e ~/projects/GTD/todo.taskpaper
-    NERDTree 
+    e ~/.work-logs
   endfunction
 
   command! GTDOpen :call <SID>gtd_open()
@@ -150,3 +149,8 @@ map <Leader><F5> :FufCoverageFile <CR>
 map <Leader><F6> :FufTag <CR>
 map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra=+q --languages=-javascript,-html,-C,-C++,-vim,-make .<CR>
 
+
+" ------------------
+"  Try to fix yaml 
+"  ----------------
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/ftplugin/yaml.vim

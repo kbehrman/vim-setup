@@ -17,7 +17,7 @@ rm -rf vim-latex
 rm -rf vcscommand
 rm -rf vim-surround
 rm -rf linediff
-rm taskpaper.vim
+rm -rf taskpaper.vim
 #rm -rf ropevim
 #rm -rf ropevim-pathogen
 
@@ -52,7 +52,7 @@ git clone https://github.com/vim-scripts/taglist.vim.git
 git clone https://github.com/tpope/vim-surround.git
 mkdir -p pythonsyntax/syntax
 curl 'http://www.vim.org/scripts/download_script.php?src_id=14268' > pythonsyntax/syntax/python3.0.vim
-cp -rf /Users/kennedy/src/vim-latex/vim-latex-1.8.23-20110214.1049-git089726a vim-latex
+#cp -rf /Users/kennedy/src/vim-latex/vim-latex-1.8.23-20110214.1049-git089726a vim-latex
 mkdir -p vim-pep8/ftplugin
 curl http://www.vim.org/scripts/download_script.php?src_id=13395 > vim-pep8/ftplugin/python_pep8.vim
 
@@ -77,9 +77,12 @@ git clone git://github.com/tpope/vim-fugitive.git
 #popd
 #git clone https://github.com/rygwdn/ropevim-helper.git
 git clone https://github.com/ludovicchabant/vim-gutentags.git
-git clone https://github.com/elixir-lang/vim-elixir.git 
+# git clone https://github.com/elixir-lang/vim-elixir.git 
 
 
-git clone https://github.com/davidoc/taskpaper.vim
+rm -rf taskpaper.vim;git clone https://github.com/davidoc/taskpaper.vim
 
-git clone https://github.com/hashivim/vim-terraform.git
+rm -rf vim-terraform;git clone https://github.com/hashivim/vim-terraform.git
+rm -rf vim-vagrant;git clone https://github.com/hashivim/vim-vagrant.git
+rm -rf vim-yaml;git clone git@github.com:stephpy/vim-yaml.git
+rm -rf LaTeX-Box;git clone git://github.com/LaTeX-Box-Team/LaTeX-Box.git

@@ -21,7 +21,7 @@ map <Leader><F8> :!/opt/local/bin/ctags  --c++-kinds=+p -R --fields=+iaS --extra
 
 match WarningMsg '\%>120v.\+' " Show long lines
 
-iabbrev debug require 'ruby-debug'; debugger; #TODO Take out
+iabbrev ruby-debug require 'ruby-debug'; debugger; #TODO Take out
 iabbrev sefl self
 iabbrev payattention require 'ruby-debug';debugger;<CR> #PAY ATTENTION: #TODO Take out
 iabbrev puts'' puts '--------------------------------------------'<CR>puts '--------------------------------------------'<CR>puts '--------------------------------------------'<CR>puts '--------------------------------------------'
