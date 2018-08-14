@@ -66,7 +66,6 @@ popd
 
 git clone git://github.com/AndrewRadev/linediff.vim.git ~/.vim/bundle/linediff 
 
-git clone git://github.com/tpope/vim-fugitive.git
 #hg clone https://bitbucket.org/tcoopman/ropevim-pathogen
 #mkdir ropevim
 #pushd ropevim
@@ -86,3 +85,6 @@ rm -rf vim-terraform;git clone https://github.com/hashivim/vim-terraform.git
 rm -rf vim-vagrant;git clone https://github.com/hashivim/vim-vagrant.git
 rm -rf vim-yaml;git clone git@github.com:stephpy/vim-yaml.git
 rm -rf LaTeX-Box;git clone git://github.com/LaTeX-Box-Team/LaTeX-Box.git
+
+rm -rf vim-fugitive;git clone https://github.com/tpope/vim-fugitive.git
+vim -u NONE -c "helptags vim-fugitive/doc" -c q

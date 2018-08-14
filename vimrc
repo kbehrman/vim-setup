@@ -96,7 +96,7 @@ let Tlist_WinWidth = 50
 if !exists("*gtd_open()")
   function! s:gtd_open()
     tabnew
-    lcd ~/projects/GTD
+    lcd ~/gprojects/GTD
     e ~/.work-logs
   endfunction
 
