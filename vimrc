@@ -9,8 +9,8 @@ set hid "Hide abandon buffers to not lose undo history.
 autocmd! bufwritepost .vimrc source %
 " Sets path to directory buffer was loaded from
 " autocmd BufEnter * lcd %:p:h
-autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
-autocmd BufNewFile *.py 0r $VIMHOME/templates/python.tpl
+"autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
+"autocmd BufNewFile *.py 0r $VIMHOME/templates/python.tpl
 "autocmd BufNewFile *.rb 0r $VIMHOME/templates/ruby.tpl
 "autocmd BufNewFile *.js 0r $VIMHOME/templates/javascript.tpl
  
@@ -89,6 +89,9 @@ let g:syntastic_loc_list_height=5
 let Tlist_Ctags_Cmd = "/opt/local/bin/ctags"
 let Tlist_WinWidth = 50
 
+" Notes
+let g:notes_directories = ['~/Documents/Notes']
+
 
 " -----------------------------------------------------------------------------
 "  | Functions |
@@ -97,7 +100,7 @@ if !exists("*gtd_open()")
   function! s:gtd_open()
     tabnew
     lcd ~/gprojects/GTD
-    e ~/.work-logs
+    e ~/Documents/Notes
   endfunction
 
   command! GTDOpen :call <SID>gtd_open()
