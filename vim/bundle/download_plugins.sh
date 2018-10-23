@@ -88,3 +88,7 @@ rm -rf LaTeX-Box;git clone git://github.com/LaTeX-Box-Team/LaTeX-Box.git
 
 rm -rf vim-fugitive;git clone https://github.com/tpope/vim-fugitive.git
 vim -u NONE -c "helptags vim-fugitive/doc" -c q
+
+rm -rf vim-misc;git clone git@github.com:xolox/vim-misc.git
+rm -rf vim-notes;git clone git@github.com:xolox/vim-notes.git
+rm -rf vimwiki;git clone https://github.com/vimwiki/vimwiki.git
