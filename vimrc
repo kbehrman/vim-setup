@@ -117,7 +117,8 @@ command! -nargs=? Underline call s:Underline(<q-args>)
 
 if !exists("*insert_date_line()")
   function! s:insert_date_line()
-    r !date
+    :normal i## <datehere>
+    let a=system("date") | exec ".s/<datehere>/".a."/g" | .s/\%x00//g
     Underline
   endfunction
 
