@@ -69,6 +69,8 @@ source $VIMRUNTIME/macros/matchit.vim
 " -----------------------------------------------------------------------------
 call pathogen#infect()
 Helptags
+filetype off
+set runtimepath+=/Applications/LilyPond.app/Contents/Resources/share/lilypond/current/vim/
 filetype on
 filetype plugin on
 filetype indent on
